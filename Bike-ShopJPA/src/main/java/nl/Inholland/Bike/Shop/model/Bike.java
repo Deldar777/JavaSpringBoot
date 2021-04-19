@@ -1,24 +1,28 @@
-package nl.inholland.shop.model;
+package nl.Inholland.Bike.Shop.model;
 
-public class Motorcycle {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-    private long id;
+public class Bike {
+
+    private String id;
     private String model;
     private String brand;
     private double price;
 
-    public Motorcycle(long id, String model, String brand, double price) {
+    public Bike(String id, String model, String brand, double price) {
+        super();
         this.id = id;
         this.model = model;
         this.brand = brand;
         this.price = price;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
