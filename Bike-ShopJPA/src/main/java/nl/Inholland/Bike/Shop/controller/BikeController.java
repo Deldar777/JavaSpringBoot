@@ -43,8 +43,8 @@ public class BikeController {
     }
 
     @PostMapping("/updateBike/{id}")
-    public Map<String, Boolean> updateBike(@RequestBody Bike bike, @PathVariable(value = "id") String bikeId) {
-        bikeService.updateBike(bikeId,bike);
+    public Map<String, Boolean> updateBike(@RequestBody Bike bike) {
+        bikeService.updateBike(bike);
         Map<String, Boolean> response = new HashMap<>();
         response.put( bike.getBrand() + " " +  bike.getModel() + " is updated", Boolean.TRUE);
         return response;
